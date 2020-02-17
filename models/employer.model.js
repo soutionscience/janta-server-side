@@ -11,6 +11,7 @@ let employer = new Schema({
     jobs: [{
         type: mongoose.Schema.Types.ObjectId, ref: 'job'
     }],
+    status: Boolean
 
 })
 

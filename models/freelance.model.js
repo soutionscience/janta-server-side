@@ -15,6 +15,8 @@ let freelancer = new Schema({
     completion_rate: Number,
     assigned_jobs: Number,
     completed_jobs: Number,
+    status: Boolean,
+    status_desc: String
 })
 
 
