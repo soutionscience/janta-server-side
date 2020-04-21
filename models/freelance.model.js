@@ -7,6 +7,8 @@ let freelancer = new Schema({
     last_name: String,
     total_earned: String,
     last_earned: String,
+    company_name: String,
+    amount_paid: String,
     jobs: [{
         type: mongoose.Schema.Types.ObjectId, ref: 'job'
     }],
@@ -15,8 +17,10 @@ let freelancer = new Schema({
     completion_rate: Number,
     assigned_jobs: Number,
     completed_jobs: Number,
-    status: Boolean,
-    status_desc: String
+    status: {type: Boolean, default: false},
+    status_desc: String,
+    accountBal: Number,
+    employer: {type: Boolean, default: false}
 })
 
 
