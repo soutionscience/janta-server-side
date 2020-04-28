@@ -16,4 +16,4 @@ let employer = new Schema({
 
 })
 
-module.exports = mongoose.model('employer', employer)
+module.exports = mongoose.model('User', employer)

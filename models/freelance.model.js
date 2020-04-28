@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let freelancer = new Schema({
+let User = new Schema({
     first_name: String,
     second_name: String,
     last_name: String,
+    skill: String,
+    About: String,
+    number: String,
     total_earned: String,
     last_earned: String,
     company_name: String,
@@ -20,8 +23,9 @@ let freelancer = new Schema({
     status: {type: Boolean, default: false},
     status_desc: String,
     accountBal: Number,
-    employer: {type: Boolean, default: false}
+    employer: {type: Boolean, default: false},
+    profession: String
 })
 
 
-module.exports = mongoose.Schema('freelancer', freelancer)
+module.exports = mongoose.model('User', User)

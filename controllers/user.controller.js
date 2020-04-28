@@ -8,3 +8,11 @@ exports.post = (req, res, next)=>{
         res.status(200).json(resp)
     })
 }
+
+exports.get = (req, res, next)=>{
+    User.find({})
+    .exec((err, resp)=>{
+        if(err) res.status(400).send(err)
+        res.status(200).json(resp)
+    })
+}
