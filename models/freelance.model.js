@@ -26,6 +26,6 @@ let User = new Schema({
     employer: {type: Boolean, default: false},
     profession: String
 })
-
+User.index({skill: 'text'})
 
 module.exports = mongoose.model('User', User)
