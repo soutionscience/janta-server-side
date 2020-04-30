@@ -5,7 +5,7 @@ let User = new Schema({
     first_name: String,
     second_name: String,
     last_name: String,
-    skill: String,
+    skill: {type: mongoose.Schema.Types.ObjectId, ref: 'skill'},
     About: String,
     number: String,
     total_earned: String,

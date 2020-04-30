@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/user.routes');
+var skillsRouter = require('./routes/skill.routes')
 let cors = require('cors')
 
  const mongoose = require('mongoose');
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/skills', skillsRouter)
 
 //conect mongoose
 
