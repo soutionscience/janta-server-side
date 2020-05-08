@@ -8,6 +8,7 @@ let employer = new Schema({
     profile_picture: String,
     company_name: String,
     amount_paid: String,
+    rating: Number,
     jobs: [{
         type: mongoose.Schema.Types.ObjectId, ref: 'job'
     }],
@@ -16,4 +17,4 @@ let employer = new Schema({
 
 })
 
-module.exports = mongoose.model('User', employer)
+module.exports = mongoose.model('employer', employer)

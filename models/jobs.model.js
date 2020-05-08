@@ -2,11 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let job= new Schema ({
+    category: {type: mongoose.Schema.Types.ObjectId, ref: 'category'},
     title: String,
     desc: String,
     budget: String,
     active: Boolean,
-    assinged: {type: Boolean, default:false}
+    assinged: {type: Boolean, default:false},
+    paid: Boolean,
+    worker:{ type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    complete: Boolean
+
 });
 
 
